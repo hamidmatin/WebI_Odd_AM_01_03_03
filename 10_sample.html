@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .test {
+        margin: 150px;
+        background-color: lightgreen;
+        line-height: 200px;
+        width: 200px;
+        text-align: center;
+
+      }
+      #div1 {
+        transform: skew(20deg);
+      }
+      #div1 > div {
+        transform: skew(-20deg);
+      }
+      #div2 {
+        transform: rotate(45deg);
+      }
+      #div2 > div {
+        transform: rotate(-45deg);
+      }
+      #div3 {
+        transform: rotate(45deg);
+      }
+      #div3 > img {
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" class="test">
+      <div>Sample Text</div>
+    </div>
+    <div id="div2" class="test">
+      <div>Sample Text</div>
+    </div>
+    <div id="div3" class="test">
+      <img src="images/img_lights_sm.jpg" alt="" />
+    </div>
+  </body>
+</html>
