@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      .product {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        margin: 10px;
+        overflow: hidden;
+      }
+      .product .product-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s;
+      }
+
+      .product:hover .product-image {
+        transform: scale(1.3);
+      }
+
+      .product .product-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(51, 41, 41, 0.699);
+
+      }
+      .product .product-overlay .product-caption {
+        color: white;
+        padding: 0;
+        margin: 0;
+      }
+
+      
+      
+      .product:hover .product-overlay {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /*****************/
+      .product .product-overlay.test1 {
+        padding: 7px;
+      }
+      .product .product-overlay.test1 .product-caption {
+        border: 1px solid white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 250px;
+      }
+      
+      /********************/
+      .product .product-overlay.test2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: 1px solid white;
+        outline-offset: -8px;
+      }
+      
+
+      /************* fade *******/
+      .product .product-overlay.fade {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      .product:hover .product-overlay.fade {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /********* move in *******/
+      .product .product-overlay.move-in {
+        transform: translateY(100%);
+        transition: all 0.3s;
+      }
+      .product:hover .product-overlay.move-in {
+        transform: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <a href="#">
+        <img src="images/front-page-project-1.jpg" alt="" class="product-image" />
+        <div class="product-overlay test1 fade">
+          <h3 class="product-caption">caption</h3>
+        </div>
+      </a>
+    </div>
+    <div class="product">
+      <a href="#">
+        <img src="images/front-page-project-1.jpg" alt="" class="product-image" />
+        <div class="product-overlay test2 move-in">
+          <h3 class="product-caption">caption</h3>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>
